@@ -1,0 +1,75 @@
+<h1 class='page-title'>Tasks</h1>
+
+<div class="container">
+	<div class='filters'>
+		<section>
+			<span #dateText [class.date-large]='showDateString()' [class.date-medium]='!showDateString()'>{{date | dateConv}}</span>
+			<button mat-icon-button class='calendar-button' (click)="picker.open()">
+					<mat-icon>date_range</mat-icon>
+				</button><br>
+			<span *ngIf='showDateString()' class='date-small'>
+					{{date}}
+				</span>
+			<mat-form-field class='main-datepicker' hidden='true'>
+				<input matInput (dateChange)="change($event)" [matDatepicker]="picker" placeholder="Choose a date">
+				<mat-datepicker #picker></mat-datepicker>
+			</mat-form-field>
+		</section>
+
+		<filter-bar [show]='columns'></filter-bar>
+	
+	</div>
+
+	<div class="task-cards">
+		<mat-card class='col-lg-3 col-md-4 col-sm-6 col-xs-12 task-card'>
+			<mat-card-title>Match Title</mat-card-title>
+			<mat-card-subtitle>BVB vs. FCB</mat-card-subtitle>
+			<mat-card-content>
+				<div class="col-xs-12 text-center club-logo-holder">
+					<div class="club-logo col-xs-5">
+						<img src='https://vignette.wikia.nocookie.net/logopedia/images/f/f5/Borussia-Dortmund%402.-old-logo.png/revision/latest?cb=20120310163407'>
+					</div>
+					<strong class='col-xs-2'>vs.</strong>
+					<div class="club-logo col-xs-5">
+						<img src='https://vignette.wikia.nocookie.net/logopedia/images/6/69/FC-Barcelona-old-logo.png/revision/latest?cb=20120211172615'>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="text-center">
+					<span class="col-xs-6">
+						<mat-icon class='task-state'>done_all</mat-icon>
+						<span><strong>Done:</strong> <strong>7</strong></span>
+					</span>
+					<span class='col-xs-6'>
+						<mat-icon class='task-state'>schedule</mat-icon>
+						<span><strong>Late:</strong> <strong>23</strong></span>
+					</span>
+				</div>
+				<div class="clearfix"></div>
+			</mat-card-content>
+			<mat-card-actions>
+				<div class="col-xs-6">
+					<button mat-button [matMenuTriggerFor]="menu">
+						<mat-icon>pan_tool</mat-icon>
+						<span>Quick Tools</span>
+					</button>
+					<mat-menu #menu="matMenu">
+						<button mat-menu-item (click)='openAddTaskDialog()'>
+							<mat-icon>note_add</mat-icon>
+							<span>Add Task</span>
+						</button>
+						<button mat-menu-item>Option 2</button>
+					</mat-menu>
+				</div>
+				<div class="col-xs-6">
+					<button mat-button>
+						<mat-icon>description</mat-icon>
+						<span>Details</span>
+					</button>
+				</div>
+				<div class="clearfix"></div>
+			</mat-card-actions>
+		</mat-card>
+		<div class="clearfix"></div>
+	</div>
+</div>

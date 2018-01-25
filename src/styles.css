@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+h1.page-title,
+h2.page-title {
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-weight: 500;
+	text-transform: uppercase
+}
+
+h2.page-title {font-size: 22px; margin: 0}
+
+mat-form-field.main-datepicker .mat-form-field-flex {
+	display: none !important
+}
+
+mat-card-header.text-center > div.mat-card-header-text {
+	width: 100%
+}
+
+.full-width-input {
+	width: 100%
+}

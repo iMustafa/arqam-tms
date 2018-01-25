@@ -1,0 +1,81 @@
+filter-bar {
+	flex: 1;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+div.filters {
+	width: 100%;
+	display: flex;
+	float: left
+}
+
+span.date-large {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+}
+
+span.date-medium {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+span.date-small {
+	font-size: 12px;
+	font-family: 'Roboto','Helvetica Neue',sans-serif;
+	color: #555;
+	font-weight: 400;
+}
+
+button.calendar-button {
+	position: relative;
+	top: -5px
+}
+
+div.task-cards {
+	padding: 125px 0 20px 0
+}
+
+mat-card.task-card {
+	padding: 10px 15px !important
+}
+
+mat-card.task-card mat-card-title {
+	margin: 0
+}
+
+
+mat-card.task-card div.club-logo-holder {
+	margin-bottom: 10px;
+}
+
+mat-card.task-card div.club-logo-holder strong {
+	position: relative;
+	top: 20px
+}
+
+mat-card.task-card div.club-logo img {
+	width: 100%
+}
+
+mat-card.task-card mat-icon.task-state {
+	position: relative;
+	top: 5px
+}
+
+mat-card.task-card mat-card-actions {
+	border-top: 1px solid #CCC;
+	box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.2);
+
+	padding-bottom: 15px
+}
+
+@media only screen and (max-width: 768px) {
+	div.filters { display: block }
+	div.filters section:last-of-type {
+		padding-left: 0;
+		width: 100%
+	}
+}

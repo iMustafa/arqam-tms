@@ -1,0 +1,27 @@
+<mat-sidenav-container>
+	<mat-sidenav #sidenav>
+		<nav-center></nav-center>
+		<nav-right></nav-right>
+	</mat-sidenav>
+
+	<mat-sidenav-content *ngIf='showNav()'>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button mat-button type="button" (click)='toggleNav(true)' class="navbar-toggle collapsed visible-xs">
+						<mat-icon>menu</mat-icon>
+					</button>
+					<a class="navbar-brand" routerLink="/">Arqam</a>
+				</div>
+
+				<div class="collapse navbar-collapse">
+					<nav>
+						<nav-center></nav-center>
+						<nav-right></nav-right>
+					</nav>
+				</div>
+
+			</div>
+		</nav>
+	</mat-sidenav-content>
+</mat-sidenav-container>

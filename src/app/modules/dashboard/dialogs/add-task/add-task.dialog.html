@@ -1,0 +1,17 @@
+<div class="main">
+	<h2 class='page-title'>Add Task</h2>
+	<filter-bar [show]='columns'></filter-bar>
+
+	<mat-form-field>
+		<input matInput [matDatepicker]="startDate" placeholder="Start Date">
+		<mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+		<mat-datepicker #startDate></mat-datepicker>
+	</mat-form-field>
+
+	<mat-form-field>
+		<input matInput [matDatepicker]="deadLine" placeholder="Dead Line">
+		<mat-datepicker-toggle matSuffix [for]="deadLine"></mat-datepicker-toggle>
+		<mat-datepicker #deadLine></mat-datepicker>
+	</mat-form-field>
+
+</div>
